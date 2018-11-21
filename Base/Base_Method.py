@@ -1,5 +1,5 @@
 from selenium.webdriver.support.wait import WebDriverWait
-import allure
+import allure,Page
 
 class Base_Method:
     # 初始化driver
@@ -20,4 +20,3 @@ class Base_Method:
         element = self.find_element(loc)
         element.clear()
         element.send_keys(text)
-        allure.attach('输入%s'%text)
