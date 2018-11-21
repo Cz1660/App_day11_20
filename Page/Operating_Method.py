@@ -12,4 +12,5 @@ class Operating_Method(Base_Method):
             list.append(i.text)
         return list
     def gain_text_list(self,loc):
-        return allure.attach('描述：',self.gain_elements_text(loc))
+        s = self.gain_elements_text(loc)
+        return allure.attach('描述：',s)
