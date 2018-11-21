@@ -20,4 +20,4 @@ class Base_Method:
         element = self.find_element(loc)
         element.clear()
         element.send_keys(text)
-        allure.attach('描述', '输入：' + text)
+        allure.attach('输入','{0}'.format(text))

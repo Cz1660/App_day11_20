@@ -11,7 +11,7 @@ class Operating_Method(Base_Method):
         for i in elements:
             list.append(i.text)
         return list
-    @allure.step('获取textlist')
+    @allure.step('gain_text_list')
     def gain_text_list(self,loc):
         s = self.gain_elements_text(loc)
-        return allure.attach("列表", "{0}".format(s))
+        return allure.attach('list', "{0}".format(s))
