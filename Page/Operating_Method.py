@@ -10,4 +10,6 @@ class Operating_Method(Base_Method):
         elements = self.find_elements(loc)
         for i in elements:
             list.append(i.text)
+        allure.attach('描述',list)
         return list
+
