@@ -6,7 +6,7 @@ class Test_Login:
         self.Dv = Return_Page(Get_Driver().get_driver())
     def teardown_class(self):
         self.Dv.driver.quit()
-    @pytest.mark(order=1)
+    @pytest.mark.run(order=1)
     @allure.step('搜索设置输入框的正确性验证')
     def test_setting(self):
         allure.attach('描述','搜索输入框输入操作')
