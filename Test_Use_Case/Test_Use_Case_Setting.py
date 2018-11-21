@@ -11,7 +11,6 @@ class Test_Login:
     def test_setting(self):
         for i in Page.input_list:
             self.Dv.return_page().send_keys_text(Page.search_setting,i)
-            list = self.Dv.return_page().gain_elements_text(Page.search_result)
-            allure.attach('描述','列表'+ list)
+            self.Dv.return_page().gain_text_list()
             assert i in self.Dv.return_page().gain_elements_text(Page.search_result)
 

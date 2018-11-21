@@ -11,8 +11,5 @@ class Operating_Method(Base_Method):
         for i in elements:
             list.append(i.text)
         return list
-
-    @allure.step('获取这一组元素的text值')
-    def gain_list(self,loc):
-        list = self.gain_elements_text(loc)
-        allure.attach('描述',list)
+    def gain_text_list(self,loc):
+        return allure.attach('描述：',self.gain_elements_text(loc))
