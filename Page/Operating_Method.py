@@ -6,5 +6,8 @@ class Operating_Method(Base_Method):
     # 获取一组元素的text
     @allure.step('获取这一组元素的text值')
     def gain_elements_text(self,loc):
+        list = []
         elements = self.find_elements(loc)
-        return elements.text
+        for i in elements:
+            list.append(i.text)
+        return list
