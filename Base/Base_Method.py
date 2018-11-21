@@ -15,6 +15,7 @@ class Base_Method:
     def click_element(self,loc):
         self.find_element(loc).click()
     # 输入
+    @allure.step('输入操作')
     def send_keys_text(self,loc,text):
         element = self.find_element(loc)
         element.clear()
