@@ -11,6 +11,5 @@ class Test_Login:
     def test_setting(self):
         for i in Page.input_list:
             self.Dv.return_page().send_keys_text(Page.search_setting,i)
-            list = self.Dv.return_page().gain_elements_text(Page.search_result)
-            assert i in list
+            assert '无线和网络'or '电池' in self.Dv.return_page().gain_elements_text(Page.search_result)
 
