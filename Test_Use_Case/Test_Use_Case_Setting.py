@@ -9,6 +9,3 @@ class Test_Login:
     def test_setting(self):
         for i in Page.input_list:
             self.Dv.return_page().send_keys_text(Page.search_setting,i)
-    def test_setting_001(self):
-        for i in Page.input_list:
-            self.Dv.return_page().send_keys_text(Page.search_setting,i)
