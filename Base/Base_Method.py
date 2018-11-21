@@ -19,5 +19,5 @@ class Base_Method:
     def send_keys_text(self,loc,text):
         element = self.find_element(loc)
         element.clear()
-        allure.attach('输入%s'% text)
         element.send_keys(text)
+        allure.attach('输入%s'%text)
