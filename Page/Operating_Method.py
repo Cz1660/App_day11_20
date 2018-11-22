@@ -6,30 +6,39 @@ class Operating_Method(Base_Method):
     def __init__(self,driver):
         Base_Method.__init__(self,driver)
     # 点击进入爱优品按钮
+    @allure.step('点击进入爱优品按钮')
     def click_love_button(self):
         self.click_element(Page.login_love_button)
     # 点击始终允许按钮
+    @allure.step('点击始终允许按钮')
     def click_all_allow_button(self):
         self.click_element(Page.all_allow_button)
     # 点击我的按钮
+    @allure.step('点击我的按钮')
     def click_my_button(self):
         self.click_element(Page.my_button)
     # 点击马上登录按钮
+    @allure.step('点击马上登录按钮')
     def click_atonce_rgisrer_button(self):
         self.click_element(Page.atonce_register_button)
     # 点击确定按钮
+    @allure.step('点击确定按钮')
     def click_confirm_button(self):
         self.click_element(Page.confirm_button)
     # 点击退出当前账号按钮
+    @allure.step('点击退出当前账号按钮')
     def click_quit_button(self):
         self.click_element(Page.quit_button)
     # 点击确定退出弹窗中确定按钮
+    @allure.step('点击确定退出弹窗中确定按钮')
     def click_config_quit_button(self):
         self.click_element(Page.confiem_quit_button)
     # 点击取消更新按钮
+    @allure.step('点击取消更新按钮按钮')
     def click_update_cancle_button(self):
         self.click_element(Page.update_cancel_button)
     # 获取一组元素的text
+    @allure.step('获取页面元素可进行下一步断言页面元素操作')
     def gain_elements_text(self,loc):
         list = []
         elements = self.find_elements(loc)
