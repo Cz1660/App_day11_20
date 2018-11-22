@@ -1,0 +1,178 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1542852733696" stop="1542852922720">
+  <name>Test_Use_Case</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1542852733696" status="passed" stop="1542852922720">
+      <name>Test_Use_Case_Setting.Test_Login_Love_Regiter.test_love_register</name>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="8856-MainThread"/>
+        <label name="host" value="EDIANZU-9E3HI0F"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1542852762550" status="passed" stop="1542852922719">
+          <name>爱优品二手手机登录功能的正确性验证</name>
+          <title>爱优品二手手机登录功能的正确性验证</title>
+          <attachments>
+            <attachment source="16ba0902-de73-4c7b-9d74-a6845a349838-attachment.txt" title="error" type="text/plain"/>
+          </attachments>
+          <steps>
+            <step start="1542852762550" status="passed" stop="1542852762642">
+              <name>页面向右滑动</name>
+              <title>页面向右滑动</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542852762642" status="passed" stop="1542852762702">
+              <name>页面向右滑动</name>
+              <title>页面向右滑动</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542852762702" status="passed" stop="1542852762751">
+              <name>页面向右滑动</name>
+              <title>页面向右滑动</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542852769507" status="passed" stop="1542852769646">
+              <name>页面向上滑动</name>
+              <title>页面向上滑动</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542852775264" status="passed" stop="1542852784718">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="990a44da-8793-4ba8-acf8-5700f887ab7c-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852784718" status="passed" stop="1542852791214">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="485a5838-5dbd-4fce-b9bb-ffb463b68f40-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852793107" status="passed" stop="1542852793178">
+              <name>页面向上滑动</name>
+              <title>页面向上滑动</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542852796551" status="passed" stop="1542852806038">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="0a1b8063-d486-4334-a1ee-33933b26affe-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852806038" status="passed" stop="1542852812649">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="c70863e1-47d6-4648-a504-2fae4287fba9-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852814498" status="passed" stop="1542852814547">
+              <name>页面向上滑动</name>
+              <title>页面向上滑动</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542852817860" status="passed" stop="1542852827324">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="2bf39f93-2ebb-41ff-9be8-8c5e654717c1-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852827324" status="passed" stop="1542852833838">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="e7d80429-4936-4602-b8a1-be3d3d2dbc6c-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852835762" status="passed" stop="1542852835821">
+              <name>页面向上滑动</name>
+              <title>页面向上滑动</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542852839116" status="passed" stop="1542852848582">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="dc20d68b-321a-4627-9217-04e07b543cc2-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852848582" status="passed" stop="1542852855111">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="6793b930-90bb-4019-a580-834c80d3dcb5-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852856971" status="passed" stop="1542852857025">
+              <name>页面向上滑动</name>
+              <title>页面向上滑动</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542852860400" status="passed" stop="1542852869832">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="89a4ffb2-29e1-49ce-a13b-6f4315de370c-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852869832" status="passed" stop="1542852876310">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="1cb44150-9628-402e-8c2d-fae8f59a07ef-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852878288" status="passed" stop="1542852878343">
+              <name>页面向上滑动</name>
+              <title>页面向上滑动</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542852881719" status="passed" stop="1542852891171">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="2554b10b-3433-4f08-946e-7ea137688398-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542852891171" status="passed" stop="1542852897622">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="79760928-6a22-4d23-838a-9c152b52b583-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
