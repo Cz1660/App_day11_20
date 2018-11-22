@@ -49,6 +49,7 @@ class Test_Login_Love_Regiter:
         self.Dv.return_page().click_atonce_rgisrer_button()
         # 输入账号密码
         for i in Page.input_user_password:
+                time.sleep(1)
                 self.Dv.return_page().send_keys_text(Page.user_input,i[0])
                 self.Dv.return_page().send_keys_text(Page.password_input,i[1])
                 # 点击确定按钮
