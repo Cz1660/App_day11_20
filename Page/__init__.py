@@ -17,10 +17,6 @@ password_input = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/al_et_pwd')
 confirm_button = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/al_ll_login')
 quit_button = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/fm_ll_out_login')
 confiem_quit_button = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/dc_right')
+back_button = (By.ID,'com.huashidai.cl.lovegoods.lovegoods:id/lt_rl_left')
 
 assert_text = ['马上登录']
-input_user_password = [['131986907288','aaa123456',1],
-                       ['13198690728','aaaa123456',1]]
-
-# ['13198690728','aaa123456'],[' 13198690728','aaa123456'],['13198690728 ','aaa123456'],
-#                        ['13198690728',' aaa123456'],['13198690728','aaa123456 '],

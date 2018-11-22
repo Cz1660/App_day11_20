@@ -37,6 +37,9 @@ class Operating_Method(Base_Method):
     @allure.step('点击取消更新按钮按钮')
     def click_update_cancle_button(self):
         self.click_element(Page.update_cancel_button)
+    @allure.step('点击回退按钮')
+    def click_back_button(self):
+        self.click_element(Page.back_button)
     # 获取一组元素的text
     @allure.step('获取页面元素可进行下一步断言页面元素操作')
     def gain_elements_text(self,loc):

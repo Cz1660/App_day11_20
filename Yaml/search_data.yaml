@@ -1,0 +1,23 @@
+# test_001:
+#  user: '13198690728'
+#  password: 'aaa123456'
+# test_002:
+#  user: ' 13198690728'
+#  password: 'aaa123456'
+# test_003:
+#  user: '13198690728 '
+#  password: 'aaa123456'
+# test_004:
+#  user: '13198690728'
+#  password: ' aaa123456'
+# test_005:
+#  user: '13198690728'
+#  password: 'aaa123456 '
+ test_006:
+  user: '131986907288'
+  password: 'aaa123456'
+  tag: 1
+ test_007:
+  user: '13198690728'
+  password: 'aaaa123456'
+  tag: 1

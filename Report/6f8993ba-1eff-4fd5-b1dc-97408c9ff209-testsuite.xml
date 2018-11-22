@@ -1,0 +1,388 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1542869226149" stop="1542869356807">
+  <name>Test_Use_Case</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1542869226149" status="failed" stop="1542869341070">
+      <name>Test_Use_Case_Setting.Test_Login_Love_Regiter.test_love_register[test_006-131986907288-aaa123456-1]</name>
+      <failure>
+        <message>TimeoutException: Message: 
+</message>
+        <stack-trace>self = &lt;Test_Use_Case.Test_Use_Case_Setting.Test_Login_Love_Regiter object at 0x032003F0&gt;, test_id = 'test_006', user = '131986907288', password = 'aaa123456'
+tag = 1
+
+    @pytest.mark.run(order=1)
+    @allure.step('爱优品二手手机登录功能的正确性验证')
+    @pytest.mark.parametrize('test_id,user,password,tag',yaml())
+    def test_love_register(self,test_id,user,password,tag):
+        # 点击我的按钮
+        self.Dv.return_page().click_my_button()
+        # 断言是否是未登录状态
+        try:
+            assert Page.assert_text[0] in self.Dv.return_page().gain_elements_text(Page.my_list_text)
+        except Exception as E:
+            allure.attach('error','{0}'.format(E))
+        finally:
+            self.Dv.return_page().click_my_button()
+        # 点击马上登录按钮
+        self.Dv.return_page().click_atonce_rgisrer_button()
+        # 输入账号密码
+        time.sleep(1)
+        self.Dv.return_page().send_keys_text(Page.user_input,user)
+        self.Dv.return_page().send_keys_text(Page.password_input,password)
+        # 点击确定按钮
+        self.Dv.return_page().click_confirm_button()
+        time.sleep(3)
+        if tag:
+            # 断言是否定位到我的按钮
+            try:
+&gt;               self.Dv.return_page().gain_text_list(Page.my_list_text)
+
+Test_Use_Case\Test_Use_Case_Setting.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = (&lt;Page.Operating_Method.Operating_Method object at 0x02EC1950&gt;, ('class name', 'android.widget.TextView')), kw = {}
+
+    @wraps(func)
+    def impl(*a, **kw):
+        with StepContext(self.allure, self.title.format(*a, **kw)):
+&gt;           return func(*a, **kw)
+
+..\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Page.Operating_Method.Operating_Method object at 0x02EC1950&gt;, loc = ('class name', 'android.widget.TextView')
+
+    @allure.step('gain_text_list')
+    def gain_text_list(self,loc):
+&gt;       s = self.gain_elements_text(loc)
+
+Page\Operating_Method.py:53: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+a = (&lt;Page.Operating_Method.Operating_Method object at 0x02EC1950&gt;, ('class name', 'android.widget.TextView')), kw = {}
+
+    @wraps(func)
+    def impl(*a, **kw):
+        with StepContext(self.allure, self.title.format(*a, **kw)):
+&gt;           return func(*a, **kw)
+
+..\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Page.Operating_Method.Operating_Method object at 0x02EC1950&gt;, loc = ('class name', 'android.widget.TextView')
+
+    @allure.step('获取页面元素可进行下一步断言页面元素操作')
+    def gain_elements_text(self,loc):
+        list = []
+&gt;       elements = self.find_elements(loc)
+
+Page\Operating_Method.py:47: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;Page.Operating_Method.Operating_Method object at 0x02EC1950&gt;, loc = ('class name', 'android.widget.TextView'), timeout = 15, poll = 1
+
+    def find_elements(self,loc,timeout=15,poll=1):
+&gt;       return WebDriverWait(self.driver,timeout,poll).until(lambda x:x.find_elements(*loc))
+
+Base\Base_Method.py:13: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="3203c3ae-e516-4cae-9044-5931d795d691")&gt;
+method = &lt;function Base_Method.find_elements.&lt;locals&gt;.&lt;lambda&gt; at 0x0330C270&gt;, message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+..\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException
+
+During handling of the above exception, another exception occurred:
+
+self = &lt;Test_Use_Case.Test_Use_Case_Setting.Test_Login_Love_Regiter object at 0x032003F0&gt;, test_id = 'test_006', user = '131986907288', password = 'aaa123456'
+tag = 1
+
+    @pytest.mark.run(order=1)
+    @allure.step('爱优品二手手机登录功能的正确性验证')
+    @pytest.mark.parametrize('test_id,user,password,tag',yaml())
+    def test_love_register(self,test_id,user,password,tag):
+        # 点击我的按钮
+        self.Dv.return_page().click_my_button()
+        # 断言是否是未登录状态
+        try:
+            assert Page.assert_text[0] in self.Dv.return_page().gain_elements_text(Page.my_list_text)
+        except Exception as E:
+            allure.attach('error','{0}'.format(E))
+        finally:
+            self.Dv.return_page().click_my_button()
+        # 点击马上登录按钮
+        self.Dv.return_page().click_atonce_rgisrer_button()
+        # 输入账号密码
+        time.sleep(1)
+        self.Dv.return_page().send_keys_text(Page.user_input,user)
+        self.Dv.return_page().send_keys_text(Page.password_input,password)
+        # 点击确定按钮
+        self.Dv.return_page().click_confirm_button()
+        time.sleep(3)
+        if tag:
+            # 断言是否定位到我的按钮
+            try:
+                self.Dv.return_page().gain_text_list(Page.my_list_text)
+            except EnvironmentError:
+                pass
+            finally:
+                # 点击回退按钮
+&gt;               self.Dv.return_page().click_back_button()
+
+Test_Use_Case\Test_Use_Case_Setting.py:74: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: in impl
+    return func(*a, **kw)
+Page\Operating_Method.py:42: in click_back_button
+    self.click_element(Page.back_button)
+Base\Base_Method.py:16: in click_element
+    self.find_element(loc).click()
+Base\Base_Method.py:10: in find_element
+    return WebDriverWait(self.driver,timeout,poll).until(lambda x:x.find_element(*loc))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="3203c3ae-e516-4cae-9044-5931d795d691")&gt;
+method = &lt;function Base_Method.find_element.&lt;locals&gt;.&lt;lambda&gt; at 0x0330C300&gt;, message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+..\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="8552-MainThread"/>
+        <label name="host" value="EDIANZU-9E3HI0F"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1542869255860" status="passed" stop="1542869255943">
+          <name>页面向右滑动</name>
+          <title>页面向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1542869255943" status="passed" stop="1542869256003">
+          <name>页面向右滑动</name>
+          <title>页面向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1542869256003" status="passed" stop="1542869256052">
+          <name>页面向右滑动</name>
+          <title>页面向右滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1542869256052" status="passed" stop="1542869257014">
+          <name>点击进入爱优品按钮</name>
+          <title>点击进入爱优品按钮</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1542869258014" status="passed" stop="1542869262594">
+          <name>点击取消更新按钮按钮</name>
+          <title>点击取消更新按钮按钮</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1542869262594" status="passed" stop="1542869262718">
+          <name>页面向上滑动</name>
+          <title>页面向上滑动</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1542869262720" status="failed" stop="1542869340912">
+          <name>爱优品二手手机登录功能的正确性验证</name>
+          <title>爱优品二手手机登录功能的正确性验证</title>
+          <attachments/>
+          <steps>
+            <step start="1542869262720" status="passed" stop="1542869263608">
+              <name>点击我的按钮</name>
+              <title>点击我的按钮</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542869263608" status="passed" stop="1542869264708">
+              <name>获取页面元素可进行下一步断言页面元素操作</name>
+              <title>获取页面元素可进行下一步断言页面元素操作</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542869264708" status="passed" stop="1542869267858">
+              <name>点击我的按钮</name>
+              <title>点击我的按钮</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542869267859" status="passed" stop="1542869268246">
+              <name>点击马上登录按钮</name>
+              <title>点击马上登录按钮</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542869269246" status="passed" stop="1542869278275">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="bc4c0134-3094-4047-b128-cb69e8f497be-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542869278275" status="passed" stop="1542869284838">
+              <name>输入操作</name>
+              <title>输入操作</title>
+              <attachments>
+                <attachment source="51e038a2-11e4-42b6-a41d-416cbc487376-attachment.txt" title="输入" type="text/plain"/>
+              </attachments>
+              <steps/>
+            </step>
+            <step start="1542869284838" status="passed" stop="1542869285730">
+              <name>点击确定按钮</name>
+              <title>点击确定按钮</title>
+              <attachments/>
+              <steps/>
+            </step>
+            <step start="1542869288730" status="failed" stop="1542869307705">
+              <name>gain_text_list</name>
+              <title>gain_text_list</title>
+              <attachments/>
+              <steps>
+                <step start="1542869288730" status="failed" stop="1542869307705">
+                  <name>获取页面元素可进行下一步断言页面元素操作</name>
+                  <title>获取页面元素可进行下一步断言页面元素操作</title>
+                  <attachments/>
+                  <steps/>
+                </step>
+              </steps>
+            </step>
+            <step start="1542869307705" status="failed" stop="1542869340912">
+              <name>点击回退按钮</name>
+              <title>点击回退按钮</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1542869341077" status="failed" stop="1542869356807">
+      <name>Test_Use_Case_Setting.Test_Login_Love_Regiter.test_love_register[test_007-13198690728-aaaa123456-1]</name>
+      <failure>
+        <message>TimeoutException: Message: 
+</message>
+        <stack-trace>self = &lt;Test_Use_Case.Test_Use_Case_Setting.Test_Login_Love_Regiter object at 0x03C9A1D0&gt;, test_id = 'test_007', user = '13198690728', password = 'aaaa123456'
+tag = 1
+
+    @pytest.mark.run(order=1)
+    @allure.step('爱优品二手手机登录功能的正确性验证')
+    @pytest.mark.parametrize('test_id,user,password,tag',yaml())
+    def test_love_register(self,test_id,user,password,tag):
+        # 点击我的按钮
+&gt;       self.Dv.return_page().click_my_button()
+
+Test_Use_Case\Test_Use_Case_Setting.py:49: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+..\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: in impl
+    return func(*a, **kw)
+Page\Operating_Method.py:19: in click_my_button
+    self.click_element(Page.my_button)
+Base\Base_Method.py:16: in click_element
+    self.find_element(loc).click()
+Base\Base_Method.py:10: in find_element
+    return WebDriverWait(self.driver,timeout,poll).until(lambda x:x.find_element(*loc))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="3203c3ae-e516-4cae-9044-5931d795d691")&gt;
+method = &lt;function Base_Method.find_element.&lt;locals&gt;.&lt;lambda&gt; at 0x03C7A4F8&gt;, message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+        return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+..\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="8552-MainThread"/>
+        <label name="host" value="EDIANZU-9E3HI0F"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1542869341078" status="failed" stop="1542869356775">
+          <name>爱优品二手手机登录功能的正确性验证</name>
+          <title>爱优品二手手机登录功能的正确性验证</title>
+          <attachments/>
+          <steps>
+            <step start="1542869341078" status="failed" stop="1542869356775">
+              <name>点击我的按钮</name>
+              <title>点击我的按钮</title>
+              <attachments/>
+              <steps/>
+            </step>
+          </steps>
+        </step>
+      </steps>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>
