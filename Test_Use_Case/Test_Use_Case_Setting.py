@@ -53,6 +53,8 @@ class Test_Login_Love_Regiter:
                 self.Dv.return_page().send_keys_text(Page.password_input,i[1])
                 # 点击确定按钮
                 self.Dv.return_page().click_confirm_button()
+                time.sleep(1)
+                self.Dv.return_page().gain_text_list()
                 if len(i) == 2:
                     time.sleep(1)
                     # 屏幕向上滑动
@@ -70,3 +72,5 @@ class Test_Login_Love_Regiter:
                         assert self.Dv.return_page().find_element(Page.my_button)
                     except Exception as E:
                         allure.attach('error', '{0}'.format(E))
+                    finally:
+                        allure.attach('error', '{0}'.format('未定位到我的按钮，登录失败！'))
