@@ -72,6 +72,5 @@ class Test_Login_Love_Regiter:
                         assert self.Dv.return_page().find_element(Page.my_button)
                     except Exception as E:
                         allure.attach('error', '{0}'.format(E))
-                        allure.attach('error', '{0}'.format('未定位到我的按钮，登录失败！'))
                     i += 1
                     continue
